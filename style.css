@@ -1,0 +1,175 @@
+.main-nav {
+	padding-bottom: 2vw;
+}
+
+.tek-nav {
+	padding-bottom: 4vw;
+}
+
+.calculator {
+	padding-top: 1vw;
+	display: inline-block;
+	margin-right: 0;
+	border: 1px solid black;
+}
+
+.card-body {
+	padding-bottom: 6px;
+	padding-top: 6px; 
+}
+
+.card {
+	width: 100%;
+}
+
+.btn {
+	background-color: white;
+	color: black;
+	border: none;
+	width: 100%;
+}
+
+#dropdownMenuButton:hover
+{
+  background-color: white;
+  color: black;
+}
+
+#dropdownMenuButton:active
+{
+  box-shadow: none;
+}
+
+#dropdownMenuButton:select
+{
+  box-shadow: none;
+}
+
+.inputs {
+	border: none;
+	height: 36px;
+}
+
+.coir-water-input {
+	border: none;
+	height: 36px;	
+}
+
+.form-control:focus {
+	 box-shadow: none;
+}
+
+.wraper {
+	border: 1px solid black;
+	border-radius: 4px;	
+	/*overflow: hidden;*/
+	display: inline-block;
+	/*clear: left;*/
+	float: left;
+}
+
+.col-md-6 {
+	float: left;
+	padding-bottom: 0;
+	height: 36px;
+}
+
+.calculator {
+	width: 85%;
+}
+
+.coir-water-calc .form-row {
+	margin-left: 3.7vw;
+}
+
+.coir-water-calc {
+	margin: 2vw;
+}
+
+.coir-water-btn {
+	margin: 2vw;
+	max-width: 50%;
+	margin-right: 40%;
+	margin-left: 40%; 	
+}
+
+.coir-water-btn:hover {
+	background-color: white;
+	color: black;
+}
+
+.btn-primary.active, .btn-primary:active{
+  background-color: red;
+	border-color: #000000;
+}
+
+.plus {
+	height: 100%;
+	width: 20%;
+
+  line-height: 80px;
+  text-align: center;
+
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.coir-water-calc .wraper {
+	width: 80%;
+}
+
+.coir-water-calc .card {
+	width: 80%;
+}
+
+.right-banner {
+	display: inline-block;
+	float: right;
+	width: 15%;
+	/*height: 36vw;*/
+	background-color: red;
+}
+
+.card-body {
+	text-align: center;
+}
+
+.tek-info {
+	display: inline-block;
+	width: 85%;
+	margin-top: 3vw;
+}
+
+#comingsoon {
+	max-width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 600px)
+{
+	.calculator {
+		width: 100%;
+	}
+
+	.tek-info {
+		width: 100%;
+	}
+
+	.inputs {
+		text-align: center;	
+	}
+
+	.coir-water-input {
+		text-align: center;	
+	}
+
+	.coir-water-input {
+		border: none;
+		height: 36px;	
+	}
+
+	.right-banner {
+		display: none;
+	}
+}

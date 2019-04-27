@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shroom Substrate Ratio</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<script
+  		src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  	</script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="main-nav">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  <a class="navbar-brand" href="#"><img src="curkaa.png"></a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="shop.html">Shop supplies</a>
+			      </li>
+						<li class="nav-item">
+			        <a class="nav-link" href="best-practices.html">Best practices</a>
+			      </li>
+			    </ul>
+			  </div>
+			</nav>			
+		</div>
+		
+		<div class="calculator">
+			<div class="container">
+				<ul class="tek-nav nav nav-pills nav-fill">
+				  <li class="nav-item">
+				    <a class="nav-link active" id="damion-tek-nav" data-toggle="tab">Damion5050</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" id="pf-tek-nav" data-toggle="tab" >PFTek</a>
+				  </li>
+				</ul>
+			</div>
+
+			<div id="damion-calc">
+				<div class="container-fluid">
+					<form>
+					  <div class="form-row">
+					  	<div class="form-group col-md-4">
+					  		<div class="wraper">
+							    <div class="col-md-6">
+							      <input type="text" id="spawn-input" class="form-control inputs" value="5">
+							    </div>
+						    	<div class="dropdown col-md-6">
+									  <button class="btn btn-secondary dropdown-toggle input-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									    quart
+									  </button>
+									  <ul class="main-calc-dropdown dropdown-menu" aria-labelledby="dropdownMenuButton">
+										  <li><a class="dropdown-item" data-value="quart">quart</a></li>
+									    <li><a class="dropdown-item" data-value="milliliter">milliliter</a></li>
+									    <li><a class="dropdown-item" data-value="liter">liter</a></li>
+									  </ul>
+									</div>
+								</div>
+
+									<div class="card ">
+									  <div class="card-body">
+									    Spawn
+									  </div>
+									</div>
+							</div>
+
+							<div class="form-group col-md-4">
+					  			  	
+					  		<div class="wraper">
+							    <div class="col-md-6">
+							      <input readonly="readonly" type="text" id="verm-input" class="form-control inputs" value="2">
+							    </div>
+
+						    	<div class="dropdown col-md-6">
+									  <button class="btn btn-secondary dropdown-toggle input-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									    quart
+									  </button>
+									  <ul class="main-calc-dropdown dropdown-menu" aria-labelledby="dropdownMenuButton">
+										  <li><a class="dropdown-item" data-value="quart">quart</a></li>
+										  <li><a class="dropdown-item" data-value="milliliter">milliliter</a></li>
+									    <li><a class="dropdown-item" data-value="liter">liter</a></li>
+									  </ul>
+									</div>	
+								</div>
+
+									<div class="card ">
+									  <div class="card-body">
+									    Vermiculite
+									  </div>
+									</div>
+							</div>
+
+
+					  	<div class="form-group col-md-4">
+					  			  	
+					  		<div class="wraper">
+							    <div class="col-md-6">
+							      <input readonly="readonly" type="text" id="coir-input" class="form-control inputs" value="1">
+							    </div>
+						    	<div class="dropdown col-md-6">
+									  <button class="btn btn-secondary dropdown-toggle input-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									    brick
+									  </button>
+									  <ul class="main-calc-dropdown dropdown-menu" aria-labelledby="dropdownMenuButton">
+									    <li><a class="dropdown-item" data-value="brick">brick</a></li>
+									    <li><a class="dropdown-item" data-value="liter">gram</a></li>
+									    <li><a class="dropdown-item" data-value="liter">kilogram</a></li>
+									    <li><a class="dropdown-item" data-value="milliliter">ounce</a></li>
+									    <li><a class="dropdown-item" data-value="milliliter">pound</a></li>
+									  </ul>
+									</div>
+								</div>
+
+									<div class="card ">
+									  <div class="card-body">
+									    Coir
+									  </div>
+									</div>
+							</div>
+
+					  	<div class="form-group col-md-4">
+					  			  	
+					  		<div class="wraper">
+							    <div class="col-md-6">
+							      <input readonly="readonly" type="text" id="water-input" class="form-control inputs" value="4">
+							    </div>
+						    	<div class="dropdown col-md-6">
+									  <button class="btn btn-secondary dropdown-toggle input-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									    quart
+									  </button>
+									  <ul class="main-calc-dropdown dropdown-menu" aria-labelledby="dropdownMenuButton">
+									    <li><a class="dropdown-item" data-value="quart">quart</a></li>
+									    <li><a class="dropdown-item" data-value="milliliter">milliliter</a></li>
+									    <li><a class="dropdown-item" data-value="liter">liter</a></li>
+									  </ul>
+									</div>
+								</div>
+
+									<div class="card ">
+									  <div class="card-body">
+									    Water
+									  </div>
+									</div>
+							</div>
+
+
+					  	<div class="form-group col-md-4">
+					  			  	
+					  		<div class="wraper">
+							    <div class="col-md-6">
+							      <input readonly="readonly" type="text" id="gypsum-input" class="form-control inputs" value="0.25">
+							    </div>
+						    	<div class="dropdown col-md-6">
+									  <button class="btn btn-secondary dropdown-toggle input-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									    cup
+									  </button>
+									  <ul class="main-calc-dropdown dropdown-menu" aria-labelledby="dropdownMenuButton">
+									    <li><a class="dropdown-item" data-value="tbsp">tbsp</a></li>
+									    <li><a class="dropdown-item" data-value="cup">cup</a></li>
+									  </ul>
+									</div>
+								</div>
+
+									<div class="card ">
+									  <div class="card-body">
+									    Gypsum
+									  </div>
+									</div>
+							</div>
+					  </div>
+					</form>
+				</div>
+			</div>
+
+			<div class='text-center' id="pf-tek-calc">
+				<img id="comingsoon" src="ComingSoon.png">
+			</div>
+
+			<div class="additional-text container">
+				
+				<p>(*one standard coir brick (650g) mixed with 4 quart of water equals 9 quart of coir/water mix)</p>
+			  <div class="center-block">
+			  	<div class="row">
+			      <button type="button" class="coir-water-btn btn btn-block btn-primary">Coir/water calculator<br><i class="angles fas fa-angle-down"></i></button>
+			    </div>
+			  </div>
+			</div>
+
+			<div class="coir-water-calc">
+					<form>
+					  <div class="form-row">
+					  	<div class="form-group col-md-4">
+					  		<div class="wraper">
+							    <div class="col-md-6">
+							      <input type="text" id='mix-calc-coir-input' class="form-control coir-water-input" value="1">
+							    </div>
+						    	<div class="dropdown col-md-6">
+									  <button class="btn btn-secondary dropdown-toggle input-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									    brick
+									  </button>
+									  <ul class="dropdown-menu coir-water-dropdown" aria-labelledby="dropdownMenuButton">
+									    <li><a class="dropdown-item" data-value="brick">brick</a></li>
+									    <li><a class="dropdown-item" data-value="liter">gram</a></li>
+									    <li><a class="dropdown-item" data-value="liter">kilogram</a></li>
+									    <li><a class="dropdown-item" data-value="milliliter">ounce</a></li>
+									    <li><a class="dropdown-item" data-value="milliliter">pound</a></li>
+									  </ul>
+									</div>
+								</div>
+
+								<div class="card ">
+								  <div class="card-body">
+								    Coir
+								  </div>
+								</div>
+								<div class="plus text-center">
+									<i class="fas fa-plus"></i>
+								</div>
+							</div>
+
+
+					  	<div class="form-group col-md-4">
+					 
+					  		<div class="wraper">
+							    <div class="col-md-6">
+							      <input type="text" id='mixWater-input' readonly="readonly"  	class="form-control coir-water-input" value="4">
+							    </div>
+						    	<div class="dropdown col-md-6">
+									  <button class="btn btn-secondary dropdown-toggle input-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									    quart
+									  </button>
+									  <ul class="dropdown-menu coir-water-dropdown" aria-labelledby="dropdownMenuButton">
+									    <li><a class="dropdown-item" data-value="quart">quart</a></li>
+									    <li><a class="dropdown-item" data-value="liter">liter</a></li>
+									    <li><a class="dropdown-item" data-value="milliliter">milliliter</a></li>
+									  </ul>
+									</div>
+								</div>
+
+								<div class="card ">
+								  <div class="card-body">
+								    Water
+								  </div>
+								</div>
+								<div class="plus text-center">
+									<i class="fas fa-equals"></i>
+								</div>
+							</div>
+
+
+					  	<div class="form-group col-md-4">
+					  			  	
+					  		<div class="wraper">
+							    <div class="col-md-6">
+							      <input readonly="readonly" type="text" id='mix-input' class="form-control coir-water-input" value="9">
+							    </div>
+						    	<div class="dropdown col-md-6">
+									  <button class="btn btn-secondary dropdown-toggle input-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									    quart
+									  </button>
+									  <ul class="dropdown-menu coir-water-dropdown" aria-labelledby="dropdownMenuButton">
+									  	<li><a class="dropdown-item" data-value="gram">quart</a></li>
+									    <li><a class="dropdown-item" data-value="gram">gram</a></li>
+									    <li><a class="dropdown-item" data-value="kilogram">kilogram</a></li>
+									    <li><a class="dropdown-item" data-value="pound">ounce</a></li>
+									    <li><a class="dropdown-item" data-value="pound">pound</a></li>
+									  </ul>
+									</div>
+								</div>
+
+									<div class="card ">
+									  <div class="card-body">
+									    Mix
+									  </div>
+									</div>
+							</div>
+						</div>
+					</form>
+			</div>	
+	</div>
+<!-- 	<div class="right-banner">
+		<p>aleksa</p>
+	</div> -->
+
+		<div class="tek-info container">
+			<div id="damion-info">
+				<p>Damion5050's tek is one of the most popular teks out there for growing mushrooms in bulk. It is simple, cheap and straight-forward method, often recommended to beginners for their first bulk grow.</p>
+				<p></p>
+				<p>Because the original Damion5050 tek is designed with simplicity  as the main characteristic, there is some room for improvement:
+				<ol>
+					<li>adding gypsum in mixture is good idea :)</li>
+					<li>pasteurizing the substrate in pressure cooker before inoculation is recommended by some people, but it is not necessary</li>
+				</ol>
+				<ul>
+					<li><a href="https://www.shroomery.org/forums/showflat.php/Number/11916595">Original Damion5050 tek on Shroomery.com</a></li>
+					<li>Damion5050 tek with some improvements: <a href="link">link</a></li>
+				</ul>
+			</div>
+			<div id="pf-tek-info">
+				<p>PF TEK IS ONE HELLOVA FUCK</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
