@@ -388,9 +388,9 @@ $(document).ready(function(){
 		$(this).parent().parent().parent().parent().children().first().find('input').val(converted); // preko html id-a? 
 	});
 
-	$('#spawn-input').on('input',function(event){
-		alert('aleksa');
-	});
+	$('#spawn-input').on('input', debounce(function(event){
+		alert('aleksa')
+	}, 500));
 
 	// $('#spawn-input').on('input', debounce(function(event){
 	// 		// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)){
