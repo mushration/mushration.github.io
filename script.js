@@ -388,28 +388,32 @@ $(document).ready(function(){
 		$(this).parent().parent().parent().parent().children().first().find('input').val(converted); // preko html id-a? 
 	});
 
-	$('#spawn-input').on('input', debounce(function(event){
-			// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)){
-		 //  	// mobile
-			// // } else if (/Chrome/i.test(ua)){
-			// //   // chrome on mobile and on computer
-			// } else {
-			//   // other computer browsers
+	$('#spawn-input').on('input',function(event){
+		alert('aleksa');
+	});
 
-			// }
+	// $('#spawn-input').on('input', debounce(function(event){
+	// 		// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)){
+	// 	 //  	// mobile
+	// 		// // } else if (/Chrome/i.test(ua)){
+	// 		// //   // chrome on mobile and on computer
+	// 		// } else {
+	// 		//   // other computer browsers
 
-		// debugger
-	 	// if (event.keyCode >= 48 && event.keyCode <= 57) { // ili ako je mobile and nesto
-			spawn_value = $('#spawn-input').val();
-			spawn.spawn = spawn_value;
-			$('.inputs').each(function(i){
-				ingridientArray[i].unit = $.trim($(this).parent().parent().children('.dropdown').find('.btn').text());
-			});
-			calculate(spawn, verm, coir, water, gypsum);
-		// } else {
-		// 	return false;
-		// }
-  }, 500));
+	// 		// }
+
+	// 	// debugger
+	//  	// if (event.keyCode >= 48 && event.keyCode <= 57) { // ili ako je mobile and nesto
+	// 		spawn_value = $('#spawn-input').val();
+	// 		spawn.spawn = spawn_value;
+	// 		$('.inputs').each(function(i){
+	// 			ingridientArray[i].unit = $.trim($(this).parent().parent().children('.dropdown').find('.btn').text());
+	// 		});
+	// 		calculate(spawn, verm, coir, water, gypsum);
+	// 	// } else {
+	// 	// 	return false;
+	// 	// }
+ //  }, 500));
 
  	mixCoir = {coir: 1, unit: 'brick', previousValue: 1, previousUnit: 'brick'}
  	mixWater = {water: 4, unit: 'quart'}
