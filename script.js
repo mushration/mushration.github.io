@@ -388,7 +388,7 @@ $(document).ready(function(){
 		$(this).parent().parent().parent().parent().children().first().find('input').val(converted); // preko html id-a? 
 	});
 
-	$('#spawn-input').on('keyup touchend', debounce(function(event){
+	$('#spawn-input').on('input', debounce(function(event){
 			// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)){
 		 //  	// mobile
 			// // } else if (/Chrome/i.test(ua)){
