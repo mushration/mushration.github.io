@@ -66,7 +66,7 @@
 					  		<div class="wraper">
 							    <div class="col-md-6">
 							    	<!-- https://stackoverflow.com/questions/6178556/phone-numeric-keyboard-for-text-input -->
-							      <input type="text" pattern="[0-9]*" inputmode="numeric" id="spawn-input" class="form-control inputs" value="5">
+							      <input onclick="this.select();" type="text" pattern="[0-9]*" inputmode="numeric" id="spawn-input" class="form-control inputs" value="5">
 							    </div>
 						    	<div class="dropdown col-md-6">
 									  <button class="btn btn-secondary dropdown-toggle input-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -216,7 +216,7 @@
 					  		<div class="wraper">
 							    <div class="col-md-6">
 							    	<!-- https://stackoverflow.com/questions/6178556/phone-numeric-keyboard-for-text-input -->
-							      <input type="text" pattern="[0-9]*" inputmode="numeric" id='mix-calc-coir-input' class="form-control coir-water-input" value="1">
+							      <input type="text" pattern="[0-9]*" inputmode="numeric" onclick="this.setSelectionRange(0, this.value.length);" id='mix-calc-coir-input' class="form-control coir-water-input" value="1">
 							    </div>
 						    	<div class="dropdown col-md-6">
 									  <button class="btn btn-secondary dropdown-toggle input-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
