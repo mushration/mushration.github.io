@@ -388,8 +388,19 @@ $(document).ready(function(){
 		$(this).parent().parent().parent().parent().children().first().find('input').val(converted); // preko html id-a? 
 	});
 
+	// var eventListener;
+	// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)){
+ //  	// mobile
+ //  	eventListener = 'input'
+	// // } else if (/Chrome/i.test(ua)){
+	// // 	// chrome on mobile and on computer
+	// } else {
+	//   // other computer browsers
+	//   eventListener = 'keyup'
+	// }
+
   // https://stackoverflow.com/a/49029711/4821316
-	$('#spawn-input').on('keyup touchend', debounce(function(event){
+	$('#spawn-input').on('keyup input', debounce(function(event){
 	 	if (event.keyCode >= 48 && event.keyCode <= 57) {
 			spawn_value = $('#spawn-input').val();
 			spawn.spawn = spawn_value;
@@ -407,7 +418,7 @@ $(document).ready(function(){
  	mix = {mix: 9, unit: 'quart'}
  	mixIngridientArray = [mixCoir, mixWater, mix]
 
-	$(".coir-water-input").on('keyup touchend', debounce(function(event){
+	$(".coir-water-input").on('keyup input', debounce(function(event){
   	 if (event.keyCode >= 48 && event.keyCode <= 57){
   	 		mix_coir_value = $('#mix-calc-coir-input').val();
   	 		mixCoir.previousValue = mixCoir.coir;
