@@ -19,7 +19,6 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -66,7 +65,7 @@
 					  		<div class="wraper">
 							    <div class="col-md-6">
 							    	<!-- https://stackoverflow.com/questions/6178556/phone-numeric-keyboard-for-text-input -->
-							      <input type="text" pattern="[0-9]*" inputmode="numeric" id="spawn-input" class="form-control inputs" value="5">
+							      <input type="text" pattern="[0-9]*" inputmode="numeric" id="spawn-input" class="form-control inputs" value="5" onclick="this.setSelectionRange(0, this.value.length)">
 							    </div>
 						    	<div class="dropdown col-md-6">
 									  <button class="btn btn-secondary dropdown-toggle input-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -216,7 +215,7 @@
 					  		<div class="wraper">
 							    <div class="col-md-6">
 							    	<!-- https://stackoverflow.com/questions/6178556/phone-numeric-keyboard-for-text-input -->
-							      <input type="text" pattern="[0-9]*" inputmode="numeric" id='mix-calc-coir-input' class="form-control coir-water-input" value="1">
+							      <input type="text" pattern="[0-9]*" inputmode="numeric" id='mix-calc-coir-input' class="form-control coir-water-input" value="1" onclick="this.setSelectionRange(0, this.value.length)">
 							    </div>
 						    	<div class="dropdown col-md-6">
 									  <button class="btn btn-secondary dropdown-toggle input-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -325,6 +324,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="script.js"></script>
 </body>
 </html>
 

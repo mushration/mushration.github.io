@@ -324,8 +324,6 @@ function calculateMix(coir, water, mix){
 }
 
 $(document).ready(function(){
-	var ua = navigator.userAgent;
-
 	// coir water toggle
 	$('.coir-water-calc').hide();
 	$('.angles').addClass('fa-angle-down');
@@ -388,19 +386,9 @@ $(document).ready(function(){
 		$(this).parent().parent().parent().parent().children().first().find('input').val(converted); // preko html id-a? 
 	});
 
-	// var eventListener;
-	// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua)){
- //  	// mobile
- //  	eventListener = 'input'
-	// // } else if (/Chrome/i.test(ua)){
-	// // 	// chrome on mobile and on computer
-	// } else {
-	//   // other computer browsers
-	//   eventListener = 'keyup'
-	// }
-	$('#spawn-input').click(function(){
-		$(this).select();
-	})
+	// $('#spawn-input').click(function(){
+	// 	$(this).select();
+	// })
 
   // https://stackoverflow.com/a/49029711/4821316
 	$('#spawn-input').on('keyup input', debounce(function(event){
