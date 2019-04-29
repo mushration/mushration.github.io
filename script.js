@@ -400,7 +400,6 @@ $(document).ready(function(){
 
 	// 	// debugger
 	 	// if (event.keyCode >= 48 && event.keyCode <= 57) { // ili ako je mobile and nesto
-	 		alert('aaa');
 			spawn_value = $('#spawn-input').val();
 			spawn.spawn = spawn_value;
 			$('.inputs').each(function(i){
@@ -417,7 +416,7 @@ $(document).ready(function(){
  	mix = {mix: 9, unit: 'quart'}
  	mixIngridientArray = [mixCoir, mixWater, mix]
 
-	$(".coir-water-input").on('keyup touchend', debounce(function(event){
+	$(".coir-water-input").on('input', debounce(function(event){
   	 if (event.keyCode >= 48 && event.keyCode <= 57){
   	 		mix_coir_value = $('#mix-calc-coir-input').val();
   	 		mixCoir.previousValue = mixCoir.coir;
