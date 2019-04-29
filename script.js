@@ -1,6 +1,3 @@
-var unit;
-var ingridientArray;
-
 function quartsToMilliliters(qt){
 	return qt * 946.352946;
 }
@@ -350,11 +347,10 @@ $(document).ready(function(){
 	var water = {'water': water_value, 'unit': 'quart'};
 	var gypsum = {'gypsum': gypsum_value, 'unit': 'cup'};
 
-	ingridientArray = [spawn, verm, coir, water, gypsum]
-
-	mixIngridientArray = [coir, water]
+	var ingridientArray = [spawn, verm, coir, water, gypsum]
 
 	// dropdowns
+	// calculations made after the unit has changed
   $(".main-calc-dropdown li a").click(function(){
 		// https://stackoverflow.com/a/22000328/4821316
   	var hash;
@@ -374,6 +370,7 @@ $(document).ready(function(){
 		ingridient = ingridientMap[cardValue];
 		var previousUnit = ingridient.unit;
 
+		// if user tries to switch current unit to same unit 
 		if (previousUnit == unit){
 			return;
 		}
@@ -386,10 +383,7 @@ $(document).ready(function(){
 		$(this).parent().parent().parent().parent().children().first().find('input').val(converted); // preko html id-a? 
 	});
 
-	// $('#spawn-input').click(function(){
-	// 	$(this).select();
-	// })
-
+  // calculations after value entry
   // https://stackoverflow.com/a/49029711/4821316
 	$('#spawn-input').on('keyup input', debounce(function(event){
 	 	if (event.keyCode >= 48 && event.keyCode <= 57) {
@@ -404,15 +398,12 @@ $(document).ready(function(){
 		}
   }, 500));
 
- 	mixCoir = {coir: 1, unit: 'brick', previousValue: 1, previousUnit: 'brick'}
- 	mixWater = {water: 4, unit: 'quart'}
- 	mix = {mix: 9, unit: 'quart'}
- 	mixIngridientArray = [mixCoir, mixWater, mix]
+ 	var mixCoir = {coir: 1, unit: 'brick', previousValue: 1, previousUnit: 'brick'}
+ 	var mixWater = {water: 4, unit: 'quart'}
+ 	var mix = {mix: 9, unit: 'quart'}
+ 	var mixIngridientArray = [mixCoir, mixWater, mix]
 
- 	$('.coir-water-input').click(function(){
-		$(this).select();
-	})
-
+ 	// calculations after value entry
 	$(".coir-water-input").on('keyup input', debounce(function(event){
   	 if (event.keyCode >= 48 && event.keyCode <= 57){
   	 		mix_coir_value = $('#mix-calc-coir-input').val();
@@ -428,6 +419,7 @@ $(document).ready(function(){
   	 }
 	}, 500));
 
+	// calculations made after the unit has changed
 	$(".coir-water-dropdown li a").click(function(){
 		var unit = $(this).text();
   	var btn = $(this).parents(".dropdown").find('.btn');
@@ -454,6 +446,7 @@ $(document).ready(function(){
 		$(this).parent().parent().parent().parent().children().first().find('input').val(converted);
 	});
 
+	// show/hide different tek content
 	$('#pf-tek-info').hide();
 	$('#pf-tek-calc').hide();
 
