@@ -398,6 +398,9 @@ $(document).ready(function(){
 	//   // other computer browsers
 	//   eventListener = 'keyup'
 	// }
+	$('#spawn-input').click(function(){
+		$(this).select();
+	})
 
   // https://stackoverflow.com/a/49029711/4821316
 	$('#spawn-input').on('keyup input', debounce(function(event){
@@ -417,6 +420,10 @@ $(document).ready(function(){
  	mixWater = {water: 4, unit: 'quart'}
  	mix = {mix: 9, unit: 'quart'}
  	mixIngridientArray = [mixCoir, mixWater, mix]
+
+ 	$('.coir-water-input').click(function(){
+		$(this).select();
+	})
 
 	$(".coir-water-input").on('keyup input', debounce(function(event){
   	 if (event.keyCode >= 48 && event.keyCode <= 57){
