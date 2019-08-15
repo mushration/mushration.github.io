@@ -386,7 +386,7 @@ $(document).ready(function(){
   // calculations after value entry
   // https://stackoverflow.com/a/49029711/4821316
 	$('#spawn-input').on('keyup input', debounce(function(event){
-	 	if (event.keyCode >= 48 && event.keyCode <= 57) {
+	 	if (event.keyCode > 48 && event.keyCode <= 57)  {
 			spawn_value = $('#spawn-input').val();
 			spawn.spawn = spawn_value;
 			$('.inputs').each(function(i){
@@ -405,7 +405,7 @@ $(document).ready(function(){
 
  	// calculations after value entry
 	$(".coir-water-input").on('keyup input', debounce(function(event){
-  	 if (event.keyCode >= 48 && event.keyCode <= 57){
+  	 if (event.keyCode > 48 && event.keyCode <= 57){
   	 		mix_coir_value = $('#mix-calc-coir-input').val();
   	 		mixCoir.previousValue = mixCoir.coir;
   	 		mixCoir.previousUnit = mixCoir.unit;
@@ -429,8 +429,10 @@ $(document).ready(function(){
 
   	var mixIngridientMap = {
 			'coir': mixIngridientArray[0],
-			'water': mixIngridientArray[1]
+			'water': mixIngridientArray[1],
+			'mix': mixIngridientArray[2]
 		}
+		
 		ingridient = mixIngridientMap[cardValue];
 		var previousUnit = ingridient.unit;
 		if (previousUnit == unit){

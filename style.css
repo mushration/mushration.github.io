@@ -48,11 +48,17 @@
 .inputs {
 	border: none;
 	height: 36px;
+	background-color: #ccc;
 }
 
 .coir-water-input {
 	border: none;
 	height: 36px;	
+	background-color: #ccc;
+}
+
+.form-control[readonly]{
+  background-color:transparent;
 }
 
 .form-control:focus {
