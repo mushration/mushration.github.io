@@ -386,7 +386,11 @@ $(document).ready(function(){
   // calculations after value entry
   // https://stackoverflow.com/a/49029711/4821316
 	$('#spawn-input').on('keyup input', debounce(function(event){
-	 	if (event.keyCode > 48 && event.keyCode <= 57)  {
+		if(this.value.charAt(0) == 0){
+			return false;
+		}
+
+	 	if (event.keyCode >= 48 && event.keyCode <= 57)  { 
 			spawn_value = $('#spawn-input').val();
 			spawn.spawn = spawn_value;
 			$('.inputs').each(function(i){
@@ -405,18 +409,21 @@ $(document).ready(function(){
 
  	// calculations after value entry
 	$(".coir-water-input").on('keyup input', debounce(function(event){
-  	 if (event.keyCode > 48 && event.keyCode <= 57){
-  	 		mix_coir_value = $('#mix-calc-coir-input').val();
-  	 		mixCoir.previousValue = mixCoir.coir;
-  	 		mixCoir.previousUnit = mixCoir.unit;
-  	 		mixCoir.coir = mix_coir_value;
-				$('.coir-water-input').each(function(i){
-					mixIngridientArray[i].unit = $.trim($(this).parent().parent().children('.dropdown').find('.btn').text());
-				});
-				calculateMix(mixCoir, mixWater, mix);
-			} else {
-				return false;
-  	 }
+		if(this.value.charAt(0) == 0){
+			return false;
+		}
+		if (event.keyCode >= 48 && event.keyCode <= 57){
+		 	mix_coir_value = $('#mix-calc-coir-input').val();
+	 		mixCoir.previousValue = mixCoir.coir;
+	 		mixCoir.previousUnit = mixCoir.unit;
+	 		mixCoir.coir = mix_coir_value;
+			$('.coir-water-input').each(function(i){
+				mixIngridientArray[i].unit = $.trim($(this).parent().parent().children('.dropdown').find('.btn').text());
+			});
+			calculateMix(mixCoir, mixWater, mix);
+		} else {
+			return false;
+		}
 	}, 500));
 
 	// calculations made after the unit has changed
